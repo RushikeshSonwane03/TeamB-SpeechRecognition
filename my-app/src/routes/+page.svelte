@@ -1,8 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import Copy from '$lib/Copy.svelte';
-	import Intro from '$lib/Intro.svelte';
-	export let data;
+
 
 	let selectedVoice = 'Microsoft David - English (United States)';
 	let voiceNames = [];
@@ -66,7 +64,6 @@
 	};
 </script>
 
-<Intro heading={data.meta.title} description={data.meta.description} />
 
 <div class="box font-normal text-gray-700 dark:text-gray-400">
 	<label for="selectedvoice" class="selectedvoice">Selected voice</label>
@@ -130,7 +127,6 @@
 
 <div class="box1">
 	<div class="p-5 mr-2 relative dark:text-white">
-		<Copy text={text.replace(/<\/?p>/g, '\n')} />
 		<textarea
 			bind:value={text}
 			class="textarea dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
