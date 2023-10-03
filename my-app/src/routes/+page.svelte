@@ -25,7 +25,6 @@
 		utterance.volume = volume;
 		utterance.rate = rate;
 		utterance.voice = speechSynthesis.getVoices().find((voice) => voice.name === selectedVoice);
-		const downloadLink = document.getElementById('download-link');
        
 		if (!utterance.voice || !selectedVoice || !text) {
 			alert('Invalid input. Please select a voice and enter text.');
