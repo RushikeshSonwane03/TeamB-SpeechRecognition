@@ -1,2 +1,4 @@
 # TeamB-SpeechRecognition
-# TeamA-TTS Text to Speech    | Chinmai Anant Arekar | Abhinab Mondal | Sagar Kumar Indra Jha | Steve Francis | Rishee Bauskar | Ridhi Kumari Jha | Tharun Kumar Katabathina | |-----------|----------------|----------------|----------------|----------------|----------------|----------------|
+
+| Pramod Devakate | Rashi Rana | Isha Chenna | Praful Shukla | Sakashi Belsare | Sakshi Bidwai | Shwetank Agarwal | Hrutuja Kargirwar |
+|-----------|----------------|----------------|----------------|----------------|----------------|----------------|----------------|
