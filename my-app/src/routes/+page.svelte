@@ -108,48 +108,67 @@
 	  interimText = "";
 	}
   </script>
-  
-  <!-- Your Svelte component's HTML structure -->
-  <div class="container">
-	<p class="heading">Speech to Text</p>
-	<div class="options">
-	  <div class="language">
-		<p>Language</p>
-		<select bind:value={selectedLanguage} on:change={restart}>
-		  {#each languages as lang}
-			<option value={lang.code}>{lang.name}</option>
-		  {/each}
-		</select>
-	  </div>
-	</div>
-	<div class="line"></div>
-	<button class="btn record" on:click={recording ? stopRecording : speechToText}>
-	  <div class="icon">
-		<ion-icon name="mic-outline"></ion-icon>
-	  </div>
-	  <p>{recording ? "Stop Listening" : "Start Listening"}</p>
-	</button>
-	<p class="heading">Result :</p>
-	<div class="result" spellcheck="false" placeholder="Text will be shown here">
-
-		<textarea name="text" id="" cols="30" rows="10">{text+""+interimText}</textarea>
-		
-	  
-	</div>
-	<div class="buttons">
-	  <button class="btn clear" on:click={clear}>
-		<ion-icon name="trash-outline"></ion-icon>
-		<p>Clear</p>
-	  </button>
-	  <button class="btn download" disabled={text === ""} on:click={download}>
-		<ion-icon name="cloud-download-outline"></ion-icon>
-		<p>Download</p>
-	  </button>
-	</div>
-  </div>
-
-  
-  <style>
-  /* Your CSS styles go here */
-  </style>
-  
+<body>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center md:px-12">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            Convert Your Speech to Text
+        </h1>
+        <p>
+            Accurately convert speech into text with an API powered by the best of Google’s AI research and technology.
+            New customers get $300 in free credits to spend on Speech-to-Text. All customers get 60 minutes for transcribing and analyzing
+            audio free per month, not charged against your credits.
+        </p>
+        <div class="mic">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="gray" class="bi bi-mic-fill" viewBox="0 0 16 16">
+                <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/>
+                <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+              </svg>
+        </div>
+        <div id="btn_start">
+                <label for = "language"></label>
+				<select bind:value={selectedLanguage} on:change={restart}>
+					{#each languages as lang}
+					  <option value={lang.code}>{lang.name}</option>
+					{/each}
+				  </select>
+                <button id="start-button"  on:click={recording ? stopRecording : speechToText}
+				class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">{recording ? "Stop Listening" : "Start Listening"} </button>
+               
+            
+        </div>
+        <form>
+            <div>
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" style="margin-top: 10px;">Your Text goes here!</label>
+                <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">{text+""+interimText}</textarea>
+            </div>
+        </form>
+        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center md:px-12">
+            <button  id="clear" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800" on:click={clear}> Clear </button>
+            <button  id="download" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" disabled={text === ""} on:click={download}> Download </button>
+        </div>
+    </div>
+</body>
+<style>
+    h1
+    {
+        color:rgb(0, 0, 0);
+        text-align: center;
+        font-size: 50px;
+    }
+    p
+    {
+        color: #9CA3AF;
+        text-align: justify;
+        text-align: center;
+        font-size: large;
+    }
+    #btn_start
+    {
+        margin-top: 20px;
+    }
+    .mic
+    {
+        margin-left: 48%;
+        padding-top: 30px;
+    }
+</style>
