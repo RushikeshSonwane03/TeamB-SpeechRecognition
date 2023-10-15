@@ -1,5 +1,6 @@
 # TeamB-SpeechRecognition
 [![Screenshot of the plaform](platform-screenshot.png)](https://developerstar.com)
+
 Co-Lead:
 | Rushikesh Sonwane | Ayush Jadhav |
 |----------------|----------------|
