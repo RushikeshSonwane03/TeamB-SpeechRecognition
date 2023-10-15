@@ -1,6 +1,8 @@
 # TeamB-SpeechRecognition
 [![Screenshot of the plaform](platform-screenshot.png)](https://developerstar.com)
 
+| Rushikesh Sonwane | Ayush Jadhav |
+|----------------|----------------|
 | Pramod Devakate | Rashi Rana | Isha Chenna | Praful Shukla | Sakashi Belsare | Sakshi Bidwai | Shwetank Agarwal | Hrutuja Kargirwar |
 |-----------|----------------|----------------|----------------|----------------|----------------|----------------|----------------|
 # Developerstar
