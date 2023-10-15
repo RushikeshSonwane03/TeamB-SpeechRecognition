@@ -1,4 +1,3 @@
-@@ -1,4 +1,60 @@
 # TeamB-SpeechRecognition
 [![Screenshot of the plaform](platform-screenshot.png)](https://developerstar.com)
 
